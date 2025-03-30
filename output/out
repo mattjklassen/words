@@ -1,0 +1,758 @@
+Argument List: ['edges2.py', '2']
+Original Tree:
+
+ABRW
+  BRW
+    RW
+    BW
+    BR
+  ARW
+    RW
+    AW
+    AR
+  ABW
+    BW
+    AW
+    AB
+  ABR
+    BR
+    AR
+    AB
+
+leaves which are 2-nodes:
+['AW', 'AR', 'AB']
+
+Tree after pruning:
+ABRW
+  ARW
+    AW
+    AR
+  ABW
+    AW
+    AB
+  ABR
+    AR
+    AB
+
+leaves after pruning which are 2-nodes:
+['AW', 'AR', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABRY
+  BRY
+    RY
+    BY
+    BR
+  ARY
+    RY
+    AY
+    AR
+  ABY
+    BY
+    AY
+    AB
+  ABR
+    BR
+    AR
+    AB
+
+leaves which are 2-nodes:
+['BY', 'AY', 'AR', 'AB']
+
+Tree after pruning:
+ABRY
+  ARY
+    AY
+    AR
+  ABY
+    BY
+    AY
+    AB
+  ABR
+    AR
+    AB
+
+leaves after pruning which are 2-nodes:
+['AY', 'AR', 'BY', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABSS
+  BSS
+    SS
+    BS
+  ASS
+    SS
+    AS
+  ABS
+    BS
+    AS
+    AB
+
+leaves which are 2-nodes:
+['AS', 'AB']
+
+Tree after pruning:
+ABSS
+  ASS
+    AS
+  ABS
+    AS
+    AB
+
+leaves after pruning which are 2-nodes:
+['AS', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABST
+  BST
+    ST
+    BT
+    BS
+  AST
+    ST
+    AT
+    AS
+  ABT
+    BT
+    AT
+    AB
+  ABS
+    BS
+    AS
+    AB
+
+leaves which are 2-nodes:
+['ST', 'AT', 'AS', 'AB']
+
+Tree after pruning:
+ABST
+  AST
+    ST
+    AT
+    AS
+  ABT
+    AT
+    AB
+  ABS
+    AS
+    AB
+
+leaves after pruning which are 2-nodes:
+['ST', 'AT', 'AS', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABSU
+  BSU
+    SU
+    BU
+    BS
+  ASU
+    SU
+    AU
+    AS
+  ABU
+    BU
+    AU
+    AB
+  ABS
+    BS
+    AS
+    AB
+
+leaves which are 2-nodes:
+['SU', 'AS', 'AB']
+
+Tree after pruning:
+ABSU
+  BSU
+    SU
+  ASU
+    SU
+    AS
+  ABS
+    AS
+    AB
+
+leaves after pruning which are 2-nodes:
+['SU', 'AS', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABSW
+  BSW
+    SW
+    BW
+    BS
+  ASW
+    SW
+    AW
+    AS
+  ABW
+    BW
+    AW
+    AB
+  ABS
+    BS
+    AS
+    AB
+
+leaves which are 2-nodes:
+['AW', 'AS', 'AB']
+
+Tree after pruning:
+ABSW
+  ASW
+    AW
+    AS
+  ABW
+    AW
+    AB
+  ABS
+    AS
+    AB
+
+leaves after pruning which are 2-nodes:
+['AW', 'AS', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABSY
+  BSY
+    SY
+    BY
+    BS
+  ASY
+    SY
+    AY
+    AS
+  ABY
+    BY
+    AY
+    AB
+  ABS
+    BS
+    AS
+    AB
+
+leaves which are 2-nodes:
+['BY', 'AY', 'AS', 'AB']
+
+Tree after pruning:
+ABSY
+  BSY
+    BY
+  ASY
+    AY
+    AS
+  ABY
+    BY
+    AY
+    AB
+  ABS
+    AS
+    AB
+
+leaves after pruning which are 2-nodes:
+['BY', 'AY', 'AS', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABTT
+  BTT
+    TT
+    BT
+  ATT
+    TT
+    AT
+  ABT
+    BT
+    AT
+    AB
+
+leaves which are 2-nodes:
+['AT', 'AB']
+
+Tree after pruning:
+ABTT
+  ATT
+    AT
+  ABT
+    AT
+    AB
+
+leaves after pruning which are 2-nodes:
+['AT', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABTU
+  BTU
+    TU
+    BU
+    BT
+  ATU
+    TU
+    AU
+    AT
+  ABU
+    BU
+    AU
+    AB
+  ABT
+    BT
+    AT
+    AB
+
+leaves which are 2-nodes:
+['TU', 'AT', 'AB']
+
+Tree after pruning:
+ABTU
+  BTU
+    TU
+  ATU
+    TU
+    AT
+  ABT
+    AT
+    AB
+
+leaves after pruning which are 2-nodes:
+['TU', 'AT', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABTY
+  BTY
+    TY
+    BY
+    BT
+  ATY
+    TY
+    AY
+    AT
+  ABY
+    BY
+    AY
+    AB
+  ABT
+    BT
+    AT
+    AB
+
+leaves which are 2-nodes:
+['BY', 'AY', 'AT', 'AB']
+
+Tree after pruning:
+ABTY
+  ATY
+    AY
+    AT
+  ABY
+    BY
+    AY
+    AB
+  ABT
+    AT
+    AB
+
+leaves after pruning which are 2-nodes:
+['AY', 'AT', 'BY', 'AB']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ABZZ
+  BZZ
+    ZZ
+    BZ
+  AZZ
+    ZZ
+    AZ
+  ABZ
+    BZ
+    AZ
+    AB
+
+leaves which are 2-nodes:
+['AZ', 'AB']
+
+Tree after pruning:
+ABZZ
+
+leaves after pruning which are 2-nodes:
+[]
+
+leaves which become 2-4-edges:
+['AZ--> ABZZ', 'AB--> ABZZ']
+
+
+Original Tree:
+
+ACCE
+  CCE
+    CE
+    CC
+  ACE
+    CE
+    AE
+    AC
+  ACC
+    CC
+    AC
+
+leaves which are 2-nodes:
+['AE']
+
+Tree after pruning:
+ACCE
+  ACE
+    AE
+
+leaves after pruning which are 2-nodes:
+['AE']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACCK
+  CCK
+    CK
+    CC
+  ACK
+    CK
+    AK
+    AC
+  ACC
+    CC
+    AC
+
+leaves which are 2-nodes:
+['AK']
+
+Tree after pruning:
+ACCK
+
+leaves after pruning which are 2-nodes:
+[]
+
+leaves which become 2-4-edges:
+['AK--> ACCK']
+
+
+Original Tree:
+
+ACCO
+  CCO
+    CO
+    CC
+  ACO
+    CO
+    AO
+    AC
+  ACC
+    CC
+    AC
+
+leaves which are 2-nodes:
+[]
+
+Tree after pruning:
+ACCO
+  ACO
+
+leaves after pruning which are 2-nodes:
+[]
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDE
+  CDE
+    DE
+    CE
+    CD
+  ADE
+    DE
+    AE
+    AD
+  ACE
+    CE
+    AE
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['DE', 'AE', 'AD']
+
+Tree after pruning:
+ACDE
+  ADE
+    DE
+    AE
+    AD
+  ACE
+    AE
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['DE', 'AE', 'AD']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDH
+  CDH
+    DH
+    CH
+    CD
+  ADH
+    DH
+    AH
+    AD
+  ACH
+    CH
+    AH
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['CH', 'AH', 'AD']
+
+Tree after pruning:
+ACDH
+  ADH
+    AH
+    AD
+  ACH
+    CH
+    AH
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['AH', 'AD', 'CH']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDI
+  CDI
+    DI
+    CI
+    CD
+  ADI
+    DI
+    AI
+    AD
+  ACI
+    CI
+    AI
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['DI', 'AI', 'AD']
+
+Tree after pruning:
+ACDI
+  CDI
+    DI
+  ADI
+    DI
+    AI
+    AD
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['DI', 'AI', 'AD']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDK
+  CDK
+    DK
+    CK
+    CD
+  ADK
+    DK
+    AK
+    AD
+  ACK
+    CK
+    AK
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['AK', 'AD']
+
+Tree after pruning:
+ACDK
+  ADK
+    AK
+    AD
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['AK', 'AD']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDL
+  CDL
+    DL
+    CL
+    CD
+  ADL
+    DL
+    AL
+    AD
+  ACL
+    CL
+    AL
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['AL', 'AD']
+
+Tree after pruning:
+ACDL
+  ADL
+    AL
+    AD
+  ACL
+    AL
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['AL', 'AD']
+
+leaves which become 2-4-edges:
+[]
+
+
+Original Tree:
+
+ACDO
+  CDO
+    DO
+    CO
+    CD
+  ADO
+    DO
+    AO
+    AD
+  ACO
+    CO
+    AO
+    AC
+  ACD
+    CD
+    AD
+    AC
+
+leaves which are 2-nodes:
+['DO', 'AD']
+
+Tree after pruning:
+ACDO
+  CDO
+    DO
+  ADO
+    DO
+    AD
+  ACO
+  ACD
+    AD
+
+leaves after pruning which are 2-nodes:
+['DO', 'AD']
+
+leaves which become 2-4-edges:
+[]
+
+

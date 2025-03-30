@@ -1,0 +1,76 @@
+Here we describe the state of the game:
+
+Assume 4 players P1, P2, P3, P4
+Assume max word length is 15
+Center = any tiles turned face up 
+Hidden = all tiles that are face down
+Tiles = all tiles (say around 200)
+Player Words = words owned by a player
+Flip = turn over one letter from the Hidden letters so it is face up
+Steal = a move made by one player which results in player owning a new word
+Steals = all possible steals in a given position
+
+Any Steal can be described as choosing any number of letters from the Center plus
+any player words (including owned by self) and rearranging all these letters to 
+make one new word, with at least 4 letters, now owned by P.
+
+Steals can be made rapidly on the same word by rearranging its letters, by the same player
+who already owns the word, or other players.
+
+The word digraph WD is a set of nodes and directed edges, where the nodes are each
+a multiset of letters of length 2 through 15 which can form at least one word.  Most nodes
+correspond to only one word, but some have more.  The letters are stored as an
+alphabetic string with repeated letters allowed.  Edges represent the addition of
+some number of letters to form a new word.  An n-m-edge points from an n-node (n letters,
+counting repetitions) to an m-node, with n<m, and indicates that words can be formed
+at each node and that the addition of m-n letters to the n-node (and alphabetizing) allows 
+the unique formation of the m-node from the n-node.  The uniqueness means that there is
+no other path of directed edges between those two nodes.  The WD can be organized into
+layers, where each layer consists of n-nodes for some n from 2 to 15.  So n-m-edges are
+directed edges from layer n to layer m.
+
+WD can be used to form a list of all possible words that can be formed by adding some fixed
+number of letters to a given word.  Define the weight w(e) of an n-m-edge e to be m-n.  Define
+weight of a directed path to be the sum of the weights of its edges.  Then from any node we
+can follow all paths of weight k to determine the set of words that can be made from the given
+node by adding k letters.
+
+When a word is initially formed and owned by a player it is given an assigned index.  This
+word can only grow in length in the course of the game.  It is not allowed to pluralize a
+word by adding an S to the end of it.  It is also not allowed to rearrange a word back to a
+previous state of the word.  Combining these, it is not allowed to rearrange a word and also
+add an S to a previous state of that word to pluralize it.  So the rule about adding an S
+can be summarized as: An S cannot be added to the end of a word if it pluralizes that word
+or any other form of that word in its history (which simply means any anagram or reordering
+of that word which occurs in its history).  It is possible that such an anagram has not
+occured until a word is stolen together with an S.  This case is allowed, since it does
+not violate the rule.
+
+A word is called "dead" if it has no extensions, meaning no letters can be added to the word
+to form a new word.  This can be computed with the WD by simply checking if there are any
+edges going out from the node.  If there are none, the word is dead. A word is called "paralyzed"
+if the word cannot be extended by using any of the remaining hidden letters.  This can only be
+determined if the set of letters is explicitly declared at the start of the game.  A word being
+dead is clearly a stronger condition and can be determined by consulting the WD.
+
+Greedy Strategy:  Steals can be ranked by a greedy strategy which maximizes the number of words
+stolen from other players first, then the number of letters stolen from the Center.  Since the
+number of words owned is a player's score, and highest score wins, taking a word from another
+player reduces their score by 1 and increases the stealer's score by 1.  This is considered
+better than making a steal only from the Center.  An ambiguous case is when some letters can
+be used to steal one's own word, called an "own-steal".  If the same letters could also be used
+to steal another player's word, an "other-steal", then the that would be considered better.  
+When comparing an "own-steal" to a steal from the center, the "own-steal" is generally stronger
+if it protects against another player stealing that word by using the same letters.  But it can
+also happen that words formed from the center prevent an "other-steal" and so can be considered
+better.  There is no clear greedy strategy here to cover all cases.
+
+Simulation:  Players can take turns flipping tiles and making steals. One way to do this is to
+rotate through a sequence of tile flip + steal, where a player can make only one steal per turn, 
+except that they are assumed to get all permutations of any word on one steal.  This makes the
+job of the AI focus only on steals which involve at least one letter from the Center.  Player
+to make steal can be assigned randomly, and if no steal is available then they pass and a new 
+tile is flipped an a new random stealer is assigned.  
+
+For simulation purposes we can write several AI functions which make greedy moves
+
