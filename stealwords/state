@@ -17,6 +17,7 @@ make one new word, with at least 4 letters, now owned by P.
 Steals can be made rapidly on the same word by rearranging its letters, by the same player
 who already owns the word, or other players.
 
+WD = Word Digraph
 The word digraph WD is a set of nodes and directed edges, where the nodes are each
 a multiset of letters of length 2 through 15 which can form at least one word.  Most nodes
 correspond to only one word, but some have more.  The letters are stored as an
@@ -33,7 +34,13 @@ WD can be used to form a list of all possible words that can be formed by adding
 number of letters to a given word.  Define the weight w(e) of an n-m-edge e to be m-n.  Define
 weight of a directed path to be the sum of the weights of its edges.  Then from any node we
 can follow all paths of weight k to determine the set of words that can be made from the given
-node by adding k letters.
+node by adding k letters.  This process also forms a tree with root the starting word and
+directed edges corresponding to a set of letters being added.  The nodes of the tree contain
+the original word's letters, and each node can be reached in only one sequence of edges from
+the original word node.  The edges in this tree also have weights w as described above.  The
+layers in the tree can be reached through edges of different weights.  For example, the first
+layer above the root might have an edge of weight 2, which means that the letters being added
+cannot be used independently to make a word as an intermediate step.
 
 When a word is initially formed and owned by a player it is given an assigned index.  This
 word can only grow in length in the course of the game.  It is not allowed to pluralize a
